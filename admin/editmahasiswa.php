@@ -10,39 +10,39 @@ if ($_SESSION['status'] != "login") {
 }
 $nim = $_GET["nim"];
 $data = mysqli_query($koneksi, "SELECT * FROM mahasiswa WHERE NIM = '$nim'");
-while($d = mysqli_fetch_array($data)){
-?>
-<?php include("header.php"); ?>
+while ($d = mysqli_fetch_array($data)) {
+    ?>
+    <?php include("header.php"); ?>
 
-<div class="fs-1 fw-bolder card-title">Edit Mahasiswa</div>
+    <div class="fs-1 fw-bolder card-title">Edit Mahasiswa</div>
 
-<a class="btn btn-primary mb-2" href="javascript:history.back();">
-    Kembali
-</a>
-    <form action="">
+    <a class="btn btn-primary mb-2" href="javascript:history.back();">
+        Kembali
+    </a>
+    <form action="proses.php" method="post">
         <div class="mb-3">
             <label for="nim" class="form-label">NIM</label>
-            <input type="text" class="form-control" value="<?=$d['NIM'];?>" id="nim">
+            <input readonly name="nim" type="text" class="form-control" value="<?= $d['NIM']; ?>" id="nim">
         </div>
         <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
-            <input type="text" class="form-control" value="<?=$d['Nama_Mahasiswa'];?>" id="nama">
+            <input name="nama" type="text" class="form-control" value="<?= $d['Nama_Mahasiswa']; ?>" id="nama">
         </div>
         <div class="mb-3">
             <label for="ttl" class="form-label">TTL</label>
-            <input type="text" class="form-control" value="<?=$d['Tempat_Tanggal_Lahir'];?>" id="ttl">
+            <input name="ttl" type="text" class="form-control" value="<?= $d['Tempat_Tanggal_Lahir']; ?>" id="ttl">
         </div>
         <div class="mb-5">
             <label for="alamat" class="form-label">Alamat</label>
-            <input type="text" class="form-control" value="<?=$d['Alamat_Mahasiswa'];?>" id="alamat">
+            <input name="alamat" type="text" class="form-control" value="<?= $d['Alamat_Mahasiswa']; ?>" id="alamat">
         </div>
-        <div class="mb-3">
-            <div class="d-grid gap-2 mt-xl-2">
-                <button type="submit" class="btn btn-success py-2">Kirim</button>
-            </div>
-        </div>
-    </form>
     <?php } ?>
-    <?php include 'footer.php'; ?>
-    <!-- <br/>
+    <div class="mb-3">
+        <div class="d-grid gap-2 mt-xl-2">
+            <input value="Update" name="updatemhs" type="submit" class="btn btn-success py-2">
+        </div>
+    </div>
+</form>
+<?php include 'footer.php'; ?>
+<!-- <br/>
 <br/>

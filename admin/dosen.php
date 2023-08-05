@@ -15,14 +15,12 @@ if ($_SESSION['status'] != "login") {
 ?>
 <?php include("header.php"); ?>
 
-<div class="card-body">
-    <div class="fw-bold fs-2 mb-3">
-        Data Dosen
-    </div>
-    <a class="btn btn-success mb-2" href="tambahdosen.php">
-        Tambah Data
-    </a>
-    <table class="table table-success">
+<div class="fs-1 fw-bolder card-title">Data Dosen</div>
+
+<a class="btn btn-success mb-2" href="tambahdosen.php">
+    Tambah Data
+</a>
+<table class="table table-borderless datatable">
         <tr>
             <th class="bg-success text-center text-light">NO</th>
             <th class="bg-success text-center text-light">NIP</th>
@@ -54,8 +52,8 @@ if ($_SESSION['status'] != "login") {
                     <?php echo $d['Kode_matakuliah']; ?>
                 </td>
                 <td class="text-center">
-                    <a href="" class="btn btn-primary">EDIT</a>
-                    <a href="" class="btn btn-danger">HAPUS</a>
+                <a href="updatedosen.php?nip=<?=$d['Nip_Dosen']?>" class="btn btn-primary">EDIT</a>
+                    <a href="hapusdosen.php?nip=<?=$d['Nip_Dosen']?>" class="btn btn-danger">HAPUS</a>
                 </td>
             </tr>
             <?php

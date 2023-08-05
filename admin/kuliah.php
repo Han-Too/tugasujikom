@@ -15,20 +15,24 @@ if ($_SESSION['status'] != "login") {
 ?>
 <?php include("header.php");?>
 
-<div class="card-body">
-    <table class="table table-success">
+<div class="fs-1 fw-bolder card-title">Data Kuliah</div>
+
+<a class="btn btn-success mb-2" href="tambahmahasiswa.php">
+    Tambah Data
+</a>
+<table class="table table-borderless datatable">
         <tr>
-            <th class="text-center">NO</th>
-            <th class="text-center">NIM</th>
-            <th class="text-center">Nama</th>
-            <th class="text-center">TTL</th>
-            <th class="text-center">Alamat</th>
-            <th class="text-center">OPSI</th>
+            <th class="bg-success text-center text-light">NO</th>
+            <th class="bg-success text-center text-light">NIM</th>
+            <th class="bg-success text-center text-light">Nama</th>
+            <th class="bg-success text-center text-light">TTL</th>
+            <th class="bg-success text-center text-light">Alamat</th>
+            <th class="bg-success text-center text-light">OPSI</th>
         </tr>
         <?php
         include '../config.php';
         $no = 1;
-        $data = mysqli_query($koneksi, "select * from mahasiswa");
+        $data = mysqli_query($koneksi, "select * from kuliah");
         while ($d = mysqli_fetch_array($data)) {
             ?>
             <tr>
