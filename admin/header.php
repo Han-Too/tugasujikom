@@ -10,6 +10,7 @@
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link
@@ -34,7 +35,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
-                <img src="assets/img/logo.png" alt="">
+                <img src="../assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">ADMIN PANEL</span>
             </a>
         </div><!-- End Logo -->
@@ -116,7 +117,7 @@
         <section class="section dashboard">
             <div class="row">
                 <div class="col-12">
-                    <div class="card recent-sales overflow-auto">
+                    <div class="card recent-sales overflow-auto shadow-lg">
                         <div class="card-body">
                             
 

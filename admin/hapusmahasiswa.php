@@ -11,10 +11,10 @@ if ($_SESSION['status'] != "login") {
 $nim = $_GET["nim"];
 $data = mysqli_query($koneksi, "DELETE FROM mahasiswa WHERE NIM = '$nim'");
 
-if (!$nambah) {
-    echo "<script>alert('YEEEY BERHASIL');window.location='mahasiswa.php'</script>";
+if ($data) {
+    echo "<script>alert('Yeeey Berhasil');window.location='dosen.php'</script>";
 } else {
-    echo "<script>alert('GAGAL COK');window.location='mahasiswa.php'</script>";
+    echo "<script>alert('Yaahhh Gagal');window.location='dosen.php'</script>";
 }
 
 ?>

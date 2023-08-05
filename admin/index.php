@@ -15,7 +15,7 @@ if ($_SESSION['status'] != "login") {
 ?>
 <?php include("header.php");?>
 
-    <div class="fs-2 fw-bolder">
+    <div class="fs-2 fw-bolder p-xl-5 mt-3" style="margin-bottom:100px;">
         Welcome To Admin
     </div>
 

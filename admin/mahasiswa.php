@@ -52,8 +52,9 @@ if ($_SESSION['status'] != "login") {
                 <?php echo $d['Alamat_Mahasiswa']; ?>
             </td>
             <td class="text-center">
-                <a href="editmahasiswa.php?nim=<?=$d['NIM']?>" class="btn btn-primary">EDIT</a>
-                <a href="hapusmahasiswa.php?nim=<?=$d['NIM']?>" class="btn btn-danger">HAPUS</a>
+                <a href="editmahasiswa.php?nim=<?= $d['NIM'] ?>" class="btn btn-primary">EDIT</a>
+                <a href="hapusmahasiswa.php?nim=<?= $d['NIM'] ?>"
+                    onclick="return confirm('Serius Bro Mau Dihapus??');" class="btn btn-danger">HAPUS</a>
             </td>
         </tr>
         <?php
